@@ -1,4 +1,3 @@
-
 package com.example.douanetemporelle;
 
 import android.content.Intent;
@@ -10,10 +9,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
+
 public class ResultActivity extends AppCompatActivity {
 
     // 1. تعريف رقم بطاقة الطالب
-    private final String matricule = "1234";
+    private static final String MATRICULE = "1234";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +28,19 @@ public class ResultActivity extends AppCompatActivity {
 
         // 3. استرجاع النتيجة واسم المسافر
         boolean verdict = getIntent().getBooleanExtra(
-                MainActivity.cleExtra(matricule, "VERDICT_FINAL"), false);
+                MainActivity.cleExtra(MATRICULE, "VERDICT_FINAL"), false);
 
-        String nom = getIntent().getStringExtra(
-                MainActivity.cleExtra(matricule, "NOM_VOYAGEUR"));
+        String nomExtra = getIntent().getStringExtra(
+                MainActivity.cleExtra(MATRICULE, "NOM_VOYAGEUR"));
+        String nom = Objects.requireNonNullElse(nomExtra, "");
 
         // 4. عرض النتيجة وتغيير لون الخلفية
         if (verdict) {
             layout.setBackgroundColor(Color.parseColor("#2E7D32"));
-            txtResultat.setText("Bon voyage " + nom + " !");
+            txtResultat.setText(getString(R.string.resultat_succes, nom));
         } else {
             layout.setBackgroundColor(Color.parseColor("#B71C1C"));
-            txtResultat.setText(nom
-                    + "votre demande de voyage temporel a été rejetée.");
+            txtResultat.setText(getString(R.string.resultat_echec, nom));
         }
 
         // 5. العودة إلى الصفحة الأولى لبدء رحلة جديدة

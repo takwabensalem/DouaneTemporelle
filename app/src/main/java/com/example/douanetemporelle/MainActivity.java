@@ -1,4 +1,3 @@
-
 package com.example.douanetemporelle;
 
 import android.content.Intent;
@@ -12,6 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String MATRICULE = "1234";
 
     // 1. إنشاء المفاتيح باستعمال رقم بطاقة الطالب
     public static String cleExtra(String matricule, String nomChamp) {
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     || rgMotif.getCheckedRadioButtonId() == -1) {
 
                 Toast.makeText(this,
-                        "Veuillez remplir tous les champs",
+                        R.string.toast_remplir_champs,
                         Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 anneeDestination = Integer.parseInt(destinationTexte);
             } catch (NumberFormatException e) {
                 Toast.makeText(this,
-                        "Veuillez entrer des années valides",
+                        R.string.toast_annees_invalides,
                         Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -71,12 +72,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,
                     VerificationActivity.class);
 
-            String matricule = "1234";
-
-            intent.putExtra(cleExtra(matricule, "NOM_VOYAGEUR"), nom);
-            intent.putExtra(cleExtra(matricule, "ANNEE_NAISSANCE"), anneeNaissance);
-            intent.putExtra(cleExtra(matricule, "ANNEE_DESTINATION"), anneeDestination);
-            intent.putExtra(cleExtra(matricule, "MOTIF_VOYAGE"), motif);
+            intent.putExtra(cleExtra(MATRICULE, "NOM_VOYAGEUR"), nom);
+            intent.putExtra(cleExtra(MATRICULE, "ANNEE_NAISSANCE"), anneeNaissance);
+            intent.putExtra(cleExtra(MATRICULE, "ANNEE_DESTINATION"), anneeDestination);
+            intent.putExtra(cleExtra(MATRICULE, "MOTIF_VOYAGE"), motif);
 
             startActivity(intent);
         });

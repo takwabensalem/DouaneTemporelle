@@ -1,10 +1,13 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DCE5EF"
     android:orientation="horizontal"
     android:padding="12dp"
-    android:background="#DCE5EF">
+    tools:context=".VerificationActivity">
 
     <!-- 1. صورة جواز السفر على اليسار -->
     <ImageView
@@ -12,110 +15,110 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.3"
-        android:src="@drawable/passeport"
+        android:background="#17365D"
+        android:contentDescription="@string/content_desc_passeport"
         android:scaleType="centerCrop"
-        android:contentDescription="Passeport temporel"
-        android:background="#17365D" />
+        android:src="@drawable/passeport" />
 
     <!-- 2. معلومات جواز السفر على اليمين -->
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.7"
-        android:padding="14dp"
-        android:background="#FFFDF5">
+        android:background="#FFFDF5"
+        android:padding="14dp">
 
         <TextView
             android:id="@+id/txt_titre_verif_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PASSEPORT TEMPOREL"
-            android:textColor="#17365D"
-            android:textSize="19sp"
-            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:background="#E8EEF5"
             android:gravity="center"
             android:padding="10dp"
-            android:background="#E8EEF5"
-            android:layout_alignParentTop="true" />
+            android:text="@string/titre_passeport_temporel"
+            android:textColor="#17365D"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_nom_verif_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nom du voyageur"
+            android:layout_below="@id/txt_titre_verif_tb"
+            android:layout_marginTop="16dp"
+            android:background="#F0F3F6"
+            android:padding="8dp"
+            android:text="@string/label_nom_voyageur"
             android:textColor="#202A35"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:padding="8dp"
-            android:background="#F0F3F6"
-            android:layout_below="@id/txt_titre_verif_tb"
-            android:layout_marginTop="16dp" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_difference_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Âge temporel"
-            android:textColor="#202A35"
-            android:textSize="16sp"
-            android:padding="8dp"
             android:layout_below="@id/txt_nom_verif_tb"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:text="@string/label_annee_destination"
+            android:textColor="#202A35"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txt_premier_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre premier"
-            android:textColor="#202A35"
-            android:textSize="16sp"
-            android:padding="8dp"
             android:layout_below="@id/txt_difference_tb"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/label_nombre_premier"
+            android:textColor="#202A35"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txt_motif_verif_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Motif du voyage"
-            android:textColor="#202A35"
-            android:textSize="16sp"
-            android:padding="8dp"
             android:layout_below="@id/txt_premier_tb"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/label_motif_voyage"
+            android:textColor="#202A35"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txt_decision_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Approbation interdite"
+            android:layout_below="@id/txt_motif_verif_tb"
+            android:layout_marginTop="8dp"
+            android:background="#FCE8E6"
+            android:padding="8dp"
+            android:text="@string/decision_interdite"
             android:textColor="#B71C1C"
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:padding="8dp"
-            android:background="#FCE8E6"
-            android:layout_below="@id/txt_motif_verif_tb"
-            android:layout_marginTop="8dp" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_approuver_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Autoriser le voyage"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#2E7D32"
             android:layout_below="@id/txt_decision_tb"
-            android:layout_marginTop="14dp" />
+            android:layout_marginTop="14dp"
+            android:backgroundTint="#2E7D32"
+            android:text="@string/btn_autoriser_voyage"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_refuser_tb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rejeter la demande"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#B71C1C"
             android:layout_below="@id/btn_approuver_tb"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#B71C1C"
+            android:text="@string/btn_rejeter_demande"
+            android:textColor="#FFFFFF" />
 
     </RelativeLayout>
 

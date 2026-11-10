@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">DouaneTemporelle</string>
+
+    <!-- MainActivity -->
     <string name="titre_douane_temporelle">DOUANE TEMPORELLE</string>
     <string name="label_nom_voyageur">Nom du voyageur</string>
     <string name="hint_nom_voyageur">Entrez votre nom</string>
@@ -12,4 +14,26 @@
     <string name="motif_modification_passe">Modification du passé</string>
     <string name="motif_fuite">Fuite</string>
     <string name="btn_inspecter_profil">Inspecter le profil</string>
+    <string name="toast_remplir_champs">Veuillez remplir tous les champs</string>
+    <string name="toast_annees_invalides">Veuillez entrer des années valides</string>
+
+    <!-- VerificationActivity -->
+    <string name="content_desc_passeport">Passeport temporel</string>
+    <string name="titre_passeport_temporel">PASSEPORT TEMPOREL</string>
+    <string name="label_nom">Nom : %1$s</string>
+    <string name="label_age_temporel">Âge temporel : %1$d ans</string>
+    <string name="label_nombre_premier">Nombre premier : %1$s</string>
+    <string name="label_motif">Motif : %1$s</string>
+    <string name="decision_interdite">Approbation interdite</string>
+    <string name="decision_aucune_interdiction">Aucune interdiction</string>
+    <string name="btn_autoriser_voyage">Autoriser le voyage</string>
+    <string name="btn_rejeter_demande">Rejeter la demande</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+
+    <!-- ResultActivity -->
+    <string name="titre_resultat_voyage">Résultat du voyage</string>
+    <string name="resultat_succes">Bon voyage %1$s !</string>
+    <string name="resultat_echec">%1$s, votre demande de voyage temporel a été rejetée.</string>
+    <string name="btn_nouveau_voyageur">Nouveau voyageur</string>
 </resources>

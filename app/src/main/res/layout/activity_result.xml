@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_resultat_tb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+
+    android:background="#FFFFFF"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="24dp"
-    android:background="#FFFFFF">
+    tools:context=".ResultActivity">
 
     <!-- 1. رسالة النتيجة -->
     <TextView
         android:id="@+id/txt_resultat_tb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Résultat du voyage"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
         android:gravity="center"
-        android:padding="20dp" />
+        android:padding="20dp"
+        android:text="@string/titre_resultat_voyage"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <!-- 2. زر رحلة جديدة -->
     <Button
         android:id="@+id/btn_nouveau_tb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nouveau voyageur"
-        android:textSize="18sp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#000080"
-        android:textColor="#FFFFFF" />
+        android:text="@string/btn_nouveau_voyageur"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
 </LinearLayout>
