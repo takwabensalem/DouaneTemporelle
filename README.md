@@ -5,7 +5,7 @@ Mini-projet (DS 1) de developpement Mobile, 3ème BI - FSEGT. Application Androi
 ## Équipe
 
 - **Takwa Ben Salem (A04)** : Activité 1 et layout XML de l'activité 2
-- **Kenza Wahebi (A03)** : Activité 3 et code Java de l'activité 2
+- **Kenza Wahabi (A03)** : Activité 3 et code Java de l'activité 2
 
 ## Les 3 écrans
 
