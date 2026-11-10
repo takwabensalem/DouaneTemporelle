@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 // نشاط التحقق: يعرض بيانات المسافر ويرسل القرار
 public class VerificationActivity extends AppCompatActivity {
 
-    // ١ - تعريف عناصر الواجهة
+    // 1 - تعريف عناصر الواجهة
     private TextView tvNomNj, tvAgeNj, tvMotifNj, tvPremierNj, tvAlerteNj;
     private Button btnApprouverNj, btnRefuserNj;
     private String nom;
@@ -20,7 +20,7 @@ public class VerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        // ٢ - ربط العناصر بالمعرفات
+        // 2 - ربط العناصر بالمعرفات
         tvNomNj = findViewById(R.id.tv_nom_tk);
         tvAgeNj = findViewById(R.id.tv_age_tk);
         tvMotifNj = findViewById(R.id.tv_motif_tk);
@@ -29,31 +29,31 @@ public class VerificationActivity extends AppCompatActivity {
         btnApprouverNj = findViewById(R.id.btn_approuver_tk);
         btnRefuserNj = findViewById(R.id.btn_refuser_tk);
 
-        // ٣ - استقبال المعطيات القادمة من النشاط الأول
+        // 3 - استقبال المعطيات القادمة من النشاط الأول
         Intent recu = getIntent();
         nom = recu.getStringExtra(Cles.construire(Cles.MATRICULE, Cles.NOM));
         int naissance = recu.getIntExtra(Cles.construire(Cles.MATRICULE, Cles.NAISSANCE), 0);
         int destination = recu.getIntExtra(Cles.construire(Cles.MATRICULE, Cles.DESTINATION), 0);
         String motif = recu.getStringExtra(Cles.construire(Cles.MATRICULE, Cles.MOTIF));
 
-        // ٤ - حساب العمر الزمني (الفرق بين سنة الوجهة وسنة الميلاد)
+        // 4 - حساب العمر الزمني (الفرق بين سنة الوجهة وسنة الميلاد)
         int difference = destination - naissance;
 
         tvNomNj.setText("Nom : " + nom);
         tvAgeNj.setText("Âge temporel : " + difference + " ans");
         tvMotifNj.setText("Motif : " + motif);
 
-        // ٥ - عرض هل الفرق عدد أولي
+        // 5 - عرض هل الفرق عدد أولي
         boolean premier = estPremier(difference);
         tvPremierNj.setText("Nombre premier : " + (premier ? "Oui" : "Non"));
 
-        // ٦ - تعطيل زر الموافقة وإظهار رسالة المنع
+        // 6 - تعطيل زر الموافقة وإظهار رسالة المنع
         if (motif.equals(getString(R.string.motif_modification)) && premier) {
             btnApprouverNj.setEnabled(false);
             tvAlerteNj.setVisibility(View.VISIBLE);
         }
 
-        // ٧ - زر الموافقة
+        // 7 - زر الموافقة
         btnApprouverNj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +61,7 @@ public class VerificationActivity extends AppCompatActivity {
             }
         });
 
-        // ٨ - زر الرفض
+        // 8 - زر الرفض
         btnRefuserNj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +70,7 @@ public class VerificationActivity extends AppCompatActivity {
         });
     }
 
-    // ٩ - إرسال القرار واسم المسافر إلى النشاط الثالث
+    // 9 - إرسال القرار واسم المسافر إلى النشاط الثالث
     private void envoyerVerdict(boolean approuve) {
         Intent intent = new Intent(VerificationActivity.this, ResultActivity.class);
         intent.putExtra(Cles.construire(Cles.MATRICULE, Cles.VERDICT), approuve);
@@ -78,7 +78,7 @@ public class VerificationActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // ١٠ - دالة اختبار العدد الأولي
+    // 10 - دالة اختبار العدد الأولي
     private boolean estPremier(int n) {
         if (n < 2) return false;
         for (int i = 2; i * i <= n; i++) {
