@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- واجهة النتيجة: خلفية خضراء أو حمراء حسب القرار -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_racine_tk"
     android:layout_width="match_parent"

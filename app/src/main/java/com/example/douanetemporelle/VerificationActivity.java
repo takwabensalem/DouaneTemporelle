@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+// نشاط التحقق: يعرض بيانات المسافر ويرسل القرار
 public class VerificationActivity extends AppCompatActivity {
 
     // ١ - تعريف عناصر الواجهة
