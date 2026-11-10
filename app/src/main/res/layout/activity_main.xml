@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txt_titre_tb"
+            android:textColor="#000080"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/titre_douane_temporelle"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nom_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_nom_voyageur"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_nom_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="personName"
+            android:hint="@string/hint_nom_voyageur"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/txt_naissance_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_annee_naissance"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_naissance_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_annee_naissance"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/txt_destination_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_annee_destination"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_destination_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_annee_destination"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/txt_motif_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_motif_voyage"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_motif_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_tourisme_tb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/motif_tourisme" />
+
+            <RadioButton
+                android:id="@+id/rb_modification_tb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/motif_modification_passe" />
+
+            <RadioButton
+                android:id="@+id/rb_fuite_tb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/motif_fuite" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_inspecter_tb"
+            android:layout_width="match_parent"
+            android:backgroundTint="#000080"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_inspecter_profil" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DouaneTemporelle</string>
+    <string name="titre_douane_temporelle">DOUANE TEMPORELLE</string>
+    <string name="label_nom_voyageur">Nom du voyageur</string>
+    <string name="hint_nom_voyageur">Entrez votre nom</string>
+    <string name="label_annee_naissance">Année de naissance</string>
+    <string name="hint_annee_naissance">Exemple : 1990</string>
+    <string name="label_annee_destination">Année de destination</string>
+    <string name="hint_annee_destination">Exemple : 2050</string>
+    <string name="label_motif_voyage">Motif du voyage</string>
+    <string name="motif_tourisme">Tourisme</string>
+    <string name="motif_modification_passe">Modification du passé</string>
+    <string name="motif_fuite">Fuite</string>
+    <string name="btn_inspecter_profil">Inspecter le profil</string>
+</resources>
