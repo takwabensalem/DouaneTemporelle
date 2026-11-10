@@ -13,7 +13,7 @@ Mini-projet (DS 1) de developpement Mobile, 3ème BI - FSEGT. Application Androi
 2. **VerificationActivity** : passeport temporel avec l'âge temporel. Le bouton « Approuver » est désactivé si le motif est « Modification du passé » et que la différence d'années est un nombre premier.
 3. **ResultActivity** : fond vert (approuvé) ou rouge (refusé), message personnalisé, et bouton « Nouveau voyageur » qui ferme les activités précédentes.
 
-# Technologies utilisées
+## Technologies utilisées
 
 - **Java**
 - **Android Studio**
