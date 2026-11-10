@@ -22,10 +22,10 @@ Git et GitHub.
 
 ## Fonctionnalités:
 
-- Saisie des informations du voyageur.
-- Calcul de la différence entre l'année de naissance et l'année de destination.
-- Vérification du nombre premier.
-- Vérification des conditions du voyage temporel.
-- Approbation ou refus du voyage.
-- Affichage du résultat de la décision.
+Saisie des informations du voyageur.
+Calcul de la différence entre l'année de naissance et l'année de destination.
+Vérification du nombre premier.
+Vérification des conditions du voyage temporel.
+Approbation ou refus du voyage.
+Affichage du résultat de la décision.
 
