@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+// نشاط النتيجة: يعرض قرار الجمارك مع اسم المسافر
 public class ResultActivity extends AppCompatActivity {
 
     @Override
