@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    // ١ - تعريف عناصر الواجهة
+    // 1 - تعريف عناصر الواجهة
     private EditText etNomNj, etNaissanceNj, etDestinationNj;
     private RadioGroup rgMotifTk;
     private Button btnInspecterNj;
@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ٢ - ربط العناصر بالمعرفات في ملف XML
+        // 2 - ربط العناصر بالمعرفات في ملف XML
         etNomNj = findViewById(R.id.et_nom_tk);
         etNaissanceNj = findViewById(R.id.et_naissance_tk);
         etDestinationNj = findViewById(R.id.et_destination_tk);
         rgMotifTk = findViewById(R.id.rg_motif_tk);
         btnInspecterNj = findViewById(R.id.btn_inspecter_tk);
 
-        // ٣ - عند الضغط على الزر
+        // 3 - عند الضغط على الزر
         btnInspecterNj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String naissStr = etNaissanceNj.getText().toString().trim();
                 String destStr = etDestinationNj.getText().toString().trim();
 
-                // ٤ - التحقق من أن كل الحقول مملوءة
+                // 4 - التحقق من أن كل الحقول مملوءة
                 if (nom.isEmpty() || naissStr.isEmpty() || destStr.isEmpty()) {
                     Toast.makeText(MainActivity.this,
                             "Remplissez tous les champs", Toast.LENGTH_SHORT).show();
@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
                 int naissance = Integer.parseInt(naissStr);
                 int destination = Integer.parseInt(destStr);
-                // ٤ - قراءة سبب السفر من أزرار الراديو
+                // 5 - قراءة سبب السفر من أزرار الراديو
                 int idChoisi = rgMotifTk.getCheckedRadioButtonId();
                 RadioButton rbChoisi = findViewById(idChoisi);
                 String motif = rbChoisi.getText().toString();
 
-                // ٥ - إنشاء Intent صريح وإرسال المعطيات بمفاتيح مبنية بالدالة الثابتة
+                // 6 - إنشاء Intent صريح وإرسال المعطيات بمفاتيح مبنية بالدالة الثابتة
                 Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
                 intent.putExtra(Cles.construire(Cles.MATRICULE, Cles.NOM), nom);
                 intent.putExtra(Cles.construire(Cles.MATRICULE, Cles.NAISSANCE), naissance);
